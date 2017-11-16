@@ -1,0 +1,34 @@
+{
+  "name": "neteasemusicworld",
+  "version": "0.0.1",
+  "description": "Unlock NetEase Music for World.",
+  "main": "background.js",
+  "scripts": {
+    "start": "npm run dev",
+    "test": "eslint background.js",
+    "build": "NODE_ENV=production gulp public",
+    "clean": "gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acgotaku/NetEaseMusicWorld.git"
+  },
+  "keywords": [
+    "NetEase",
+    "Music"
+  ],
+  "author": "acgotaku311",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/acgotaku/NetEaseMusicWorld/issues"
+  },
+  "homepage": "https://github.com/acgotaku/NetEaseMusicWorld#readme",
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

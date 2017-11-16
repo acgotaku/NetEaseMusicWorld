@@ -1,0 +1,18 @@
+{
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": true
+  },
+  "default_locale": "en",
+  "description": "__MSG_description__",
+  "icons": {
+    "16": "img/logo16.png",
+    "48": "img/logo48.png",
+    "128": "img/logo128.png"
+  },
+  "manifest_version": 2,
+  "permissions": [ "notifications", "*://music.163.com/", "activeTab", "contextMenus", "storage",  "webRequest", "webRequestBlocking" ],
+  "name": "__MSG_appName__",
+  "author": "acgotaku",
+  "version": "0.0.1"
+}
