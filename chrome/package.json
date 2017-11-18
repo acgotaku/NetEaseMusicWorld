@@ -1,6 +1,6 @@
 {
   "name": "neteasemusicworld",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Unlock NetEase Music for World.",
   "main": "background.js",
   "scripts": {

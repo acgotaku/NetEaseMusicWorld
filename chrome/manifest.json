@@ -14,5 +14,5 @@
   "permissions": [ "notifications", "*://music.163.com/", "activeTab", "contextMenus", "storage",  "webRequest", "webRequestBlocking" ],
   "name": "__MSG_appName__",
   "author": "acgotaku",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
