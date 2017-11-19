@@ -1,6 +1,6 @@
-# NetEaseMusicWorld
+# NetEaseMusicWorld [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/kmaboigdbjjclfomcbpafdclllbinmam.svg)](https://chrome.google.com/webstore/detail/neteasemusicworld/kmaboigdbjjclfomcbpafdclllbinmam)
 
-开发者模式导入插件。
+安装插件。
 
 并且在`hosts`文件里写入如下内容：
 
