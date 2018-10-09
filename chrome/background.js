@@ -6,7 +6,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function (details) {
     name: 'X-Real-IP',
     value: '211.161.244.70'
   }
-  if (toggle) details.requestHeaders.push(header)
+  details.requestHeaders.push(header)
   return { requestHeaders: details.requestHeaders }
 }, { urls: ['*://music.163.com/*'] }, ['blocking', 'requestHeaders'])
 
@@ -23,7 +23,7 @@ chrome.browserAction.onClicked.addListener(function (tab) {
   chrome.storage.local.get('toggle', function (data) {
     chrome.storage.local.set({ toggle: !data.toggle })
     toggle = !data.toggle
-    chrome.browserAction.setBadgeText({ text: ((toggle) ? 'ON' : 'OFF') })
+    chrome.browserAction.setBadgeText({ text: ((toggle) ? 'CDN' : '') })
   })
 })
 
@@ -31,5 +31,5 @@ chrome.browserAction.onClicked.addListener(function (tab) {
 chrome.storage.local.get('toggle', function (data) {
   toggle = (typeof(data.toggle) === "undefined") ? true : data.toggle
   chrome.storage.local.set({ toggle: toggle })
-  chrome.browserAction.setBadgeText({ text: ((toggle) ? 'ON' : 'OFF') })
+  chrome.browserAction.setBadgeText({ text: ((toggle) ? 'CDN' : '') })
 })
