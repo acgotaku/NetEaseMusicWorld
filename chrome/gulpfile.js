@@ -1,36 +1,29 @@
-const gulp = require('gulp')
+const { series, src, dest } = require('gulp')
 const zip = require('gulp-zip')
 
 const del = require('del')
-const runSequence = require('run-sequence')
 
 const eslint = require('gulp-eslint')
 const jsEntries = ['background.js']
 const zipTarget = ['./_locales/**/*', './img/**/*', 'background.js', 'manifest.json']
 
-gulp.task('lint', function () {
-  return gulp.src(jsEntries)
+function lint () {
+  return src(jsEntries)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
-})
+}
 
-gulp.task('zip', function () {
-  return gulp.src(zipTarget, { base: '.' })
+function compress () {
+  return src(zipTarget, { base: '.' })
     .pipe(zip('chrome.zip'))
-    .pipe(gulp.dest('dist/'))
-})
-
-gulp.task('clean', function () {
+    .pipe(dest('dist/'))
+}
+function clean () {
   return del([
     'dist/'
   ])
-})
+}
 
-gulp.task('public', ['clean', 'lint'], function () {
-  runSequence(['zip'])
-})
-
-gulp.task('default', function () {
-  console.info('You should use npm run dev to start development mode.')
-})
+exports.clean = clean
+exports.public = series(clean, lint, compress)

@@ -5,7 +5,8 @@
   "main": "background.js",
   "scripts": {
     "build": "gulp public",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "eslint:fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -24,14 +25,14 @@
   "devDependencies": {
     "del": "^3.0.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-eslint": "^5.0.0",
-    "gulp-zip": "^4.0.0",
-    "randomatic": "^3.1.0",
-    "run-sequence": "^2.2.0"
+    "gulp-zip": "^4.2.0",
+    "randomatic": "^3.1.1",
+    "run-sequence": "^2.2.1"
   }
 }
