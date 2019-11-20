@@ -26,4 +26,5 @@ function clean () {
 }
 
 exports.clean = clean
+exports.lint = lint
 exports.public = series(clean, lint, compress)

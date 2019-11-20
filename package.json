@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp public",
     "clean": "gulp clean",
-    "eslint:fix": "eslint --fix ."
+    "lint": "gulp lint",
+    "lint:fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
